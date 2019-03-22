@@ -5,7 +5,7 @@ This project is helpful if anyone wants to add mail services in their website
 or
 
 
-# if you have hosted you website for free or any paid version on hosting company websites like on 000webhost then it is little easy to send a mail using inquiry (contact) form.
+# if you have hosted your website for free or any paid version on hosting company websites like on 000webhost then it is little easy to send a mail using inquiry (contact) form.
  for this use the file index1.php
   
 
