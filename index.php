@@ -7,7 +7,7 @@ require_once('PHPMailer/PHPMailerAutoload.php');
 	$email=$_POST['email'];
 	$phonenumber=$_POST["phonenumber"];
 	$course=$_POST['course'];  //  encrypted password
-    $msg="Email sent! Please Check your mail";
+    $msg="";
 
 $mail=new PHPMailer();
 //$mail->SMTPDebug = 1;
@@ -17,19 +17,19 @@ $mail->SMTPSecure='ssl';
 $mail->Host='smtp.gmail.com';
 $mail->Port='465';
 $mail->isHTML(true);
-$mail->Username='rajnishpatel8863939768@gmail.com';
-$mail->Password='mynameisladdu';
-//$mail->SetFrom('rajnishpatel8863939768@gmail.com');
+$mail->Username='sender email';
+$mail->Password='sender email password';
+//$mail->SetFrom('sender email');
 $mail->Subject='CallBack request';
 $mail->Body='Thaks for enrollment.We will reach you soon.<br>Your course name is:'.$course.'<br> Your Phone number is:'.$phonenumber;
 $mail->AddAddress($email);
 
 
 if($mail->send())
-	echo("");
+	$msg="Email sent! Please Check your mail";
       
 else
-	 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+	 echo "Message could not be sent";
  
 } 
 ?>
@@ -46,7 +46,7 @@ else
 	<h2><?php echo($msg);?></h2>
 	<?php endif;?>
 	<h3>VLCC Inquiry Form</h3>
-    <h4>Enroll for VLCC Institute Guwahati</h4>
+    <h4>Enroll for VLCC Institute</h4>
 	 
     <fieldset>
       <input placeholder="Name" type="text" name="name" required autofocus>
